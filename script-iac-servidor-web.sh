@@ -10,12 +10,15 @@ sudo apt-get install unzip -y
 
 cd /tmp
 
-if [ wget https://github.com/denilsonbonatti/linux-site-dio/archive/refs/heads/main.zip ] then
+if wget https://github.com/denilsonbonatti/linux-site-dio/archive/refs/heads/main.zip; then
      echo -e "Baixando aplicação\n"
 
 else
      echo -e "instalando wget\n" 
-     sudo apt-get install wget -y 
+     sudo apt-get install wget -y
+
+     echo -e "Baixando aplicação\n"
+     if wget https://github.com/denilsonbonatti/linux-site-dio/archive/refs/heads/main.zip
 fi
 
 echo -e "Copiando arquivos para diretório padrão do apache"
