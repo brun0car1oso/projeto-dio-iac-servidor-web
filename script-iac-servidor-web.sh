@@ -41,6 +41,7 @@ unzip main.zip
 
 cd linux-site-dio-main
 
+sleep 5
 clear
 
 echo -e "Copiando arquivos para diretório padrão do apache \n"
