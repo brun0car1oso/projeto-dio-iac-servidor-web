@@ -1,12 +1,20 @@
 echo -e "Atualizando servidor\n"
-
 apt-get update && apt-get upgrade 
 
+sleep 5
+clear
+
 echo -e "Instalando o servidor apache2\n"
-sudo apt-get install apache2 -y 
+apt-get install apache2 -y 
+
+sleep 5
+clear
 
 echo -e "Instalando o unzip\n"
-sudo apt-get install unzip -y 
+apt-get install unzip -y 
+
+sleep 5
+clear
 
 cd /tmp
 
@@ -15,7 +23,7 @@ if wget https://github.com/denilsonbonatti/linux-site-dio/archive/refs/heads/mai
 
 else
      echo -e "instalando wget\n" 
-     sudo apt-get install wget -y
+     apt-get install wget -y
 
      echo -e "Baixando aplicação\n"
      if wget https://github.com/denilsonbonatti/linux-site-dio/archive/refs/heads/main.zip
