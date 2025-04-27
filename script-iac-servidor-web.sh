@@ -10,7 +10,7 @@ apt-get install apache2 -y
 sleep 5
 clear
 
-echo -e "Instalando o unzip\n"
+echo -e "Instalando o unzip \n"
 apt-get install unzip -y 
 
 sleep 5
@@ -22,14 +22,17 @@ if wget https://github.com/denilsonbonatti/linux-site-dio/archive/refs/heads/mai
      echo -e "Baixando aplicação\n"
 
 else
-     echo -e "instalando wget\n" 
+     echo -e "instalando wget \n" 
      apt-get install wget -y
 
-     echo -e "Baixando aplicação\n"
+     echo -e "Baixando aplicação \n"
      wget https://github.com/denilsonbonatti/linux-site-dio/archive/refs/heads/main.zip
 fi
 
-cd linux-site-dio
-echo -e "Copiando arquivos para diretório padrão do apache \n"
+echo -e "Descompactando arquivos \n"
+unzip main.zip
 
-cp -vr archive /var/www/html 
+cd linux-site-dio
+
+echo -e "Copiando arquivos para diretório padrão do apache \n"
+cp -vrR * /var/www/html 
