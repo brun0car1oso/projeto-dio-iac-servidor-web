@@ -41,7 +41,10 @@ unzip main.zip
 
 cd linux-site-dio-main
 
+clear
+
 echo -e "Copiando arquivos para diretório padrão do apache \n"
 cp -rR * /var/www/html
 
+sleep 5
 echo "FIM"
