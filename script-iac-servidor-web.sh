@@ -1,10 +1,10 @@
-echo -e "Atualizando servidor\n"
+echo -e "Atualizando servidor \n"
 apt-get update && apt-get upgrade 
 
 sleep 5
 clear
 
-echo -e "Instalando o servidor apache2\n"
+echo -e "Instalando o servidor apache2 \n"
 apt-get install apache2 -y 
 
 sleep 5
@@ -26,9 +26,10 @@ else
      apt-get install wget -y
 
      echo -e "Baixando aplicação\n"
-     if wget https://github.com/denilsonbonatti/linux-site-dio/archive/refs/heads/main.zip
+     wget https://github.com/denilsonbonatti/linux-site-dio/archive/refs/heads/main.zip
 fi
 
-echo -e "Copiando arquivos para diretório padrão do apache"
+cd linux-site-dio
+echo -e "Copiando arquivos para diretório padrão do apache \n"
 
 cp -vr archive /var/www/html 
