@@ -18,8 +18,12 @@ clear
 
 cd /tmp
 
+
+echo -e "Baixando aplicação\n"
+
 if wget https://github.com/denilsonbonatti/linux-site-dio/archive/refs/heads/main.zip; then
-     echo -e "Baixando aplicação\n"
+     
+     echo -e "Aplicação baixada \n"
 
 else
      echo -e "instalando wget \n" 
@@ -27,6 +31,9 @@ else
 
      echo -e "Baixando aplicação \n"
      wget https://github.com/denilsonbonatti/linux-site-dio/archive/refs/heads/main.zip
+     
+     echo -e "Aplicação baixada \n"
+
 fi
 
 echo -e "Descompactando arquivos \n"
@@ -35,4 +42,6 @@ unzip main.zip
 cd linux-site-dio
 
 echo -e "Copiando arquivos para diretório padrão do apache \n"
-cp -vrR * /var/www/html 
+cp -rR * /var/www/html 
+
+echo "FIM"
